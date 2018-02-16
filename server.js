@@ -18,6 +18,12 @@ var contentone = {
                 </p>`
 };
 
+function createTemplate(data){
+    var title = data.title;
+    var date = data.date;
+    var content = data.content;
+}
+
 
 var htmltemplate =
    ` <html>
