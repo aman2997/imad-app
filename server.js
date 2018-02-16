@@ -27,7 +27,7 @@ var htmltemplate =
    ` <html>
     <head>
         <title>
-        $(title)
+        ${title}
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
@@ -38,10 +38,10 @@ var htmltemplate =
             </div>
             <hr>
             <div>
-                $(date)
+                ${date}
             </div>
             <div>
-                $(content)
+                ${content}
             </div>
         </div>
     </body>
