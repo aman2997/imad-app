@@ -22,6 +22,7 @@ img.onclick = function()
     
 };
 
+var counter = 0;
 var button = document.getElementById('c');
 button.onclick = function() {
     //Make a request to the counter endpoint
