@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var contentone = {
+var content = {
+    content1 : {
   title: 'Article-one',
   date: '5th Feb, 2018',
   content: 
@@ -16,6 +17,29 @@ var contentone = {
                 <p>
                     This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
                 </p>`
+},
+content2 : {
+  title: 'Article-two',
+  date: '6th Feb, 2018',
+  content: 
+                `<p>
+                    This is the content for my second article. This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+                </p>
+                <p>
+                    This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+                </p>`
+},
+content3 : {
+  title: 'Article-three',
+  date: '7th Feb, 2018',
+  content: 
+                `<p>
+                    This is the content for my third article. This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+                </p>
+                <p>
+                    This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+                </p>`
+}
 };
 
 function createTemplate(data){
@@ -56,15 +80,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-  res.send(createTemplate(contentone));
+  res.send(createTemplate(content.content1));
 });
 
 app.get('/article-two', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+  res.send(createTemplate(content.content2));
 });
 
 app.get('/article-three', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+  res.send(createTemplate(content.content3));
 });
 
 app.get('/ui/style.css', function (req, res) {
