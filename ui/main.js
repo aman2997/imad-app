@@ -8,7 +8,7 @@ element.innerHTML = 'Why does Aman keep changing this text with JavaScript';
 //move image
 
 var ele = document.getElementById('m');
-m.onclick = function()
+img.onclick = function()
 {
     img.style.marginLeft = '100px';
 };
