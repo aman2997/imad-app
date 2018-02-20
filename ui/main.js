@@ -38,6 +38,6 @@ submit.onclick = function() {
   {
       list += '<li>' + names[i] + '</li>';
   }
-  var ul = document.getElementbyId('namelist');
+  var ul = document.getElementById('namelist');
   ul.innerHTML = list;
 };
