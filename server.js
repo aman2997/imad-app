@@ -21,7 +21,11 @@ app.get('/test-db/', function (req, res) {
     pool.query('SELECT * fROM test', function (req, res) {
         if(err)
         {
-            res.status(500).send(err, toString());
+            res.status(500).send(err.toString());
+        }
+        else
+        {
+            res.send(JSON.stringify(result));
         }
     })
 });
