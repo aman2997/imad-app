@@ -125,14 +125,14 @@ app.get('/ui/main.js', function (req, res) {
 
 app.get('/articles/:articleName', function (req, res) {
 
-    pool.query("SELECT * fROM test WHERE article = " + req.params.articleName;, function (err, result) {
+    pool.query("SELECT * fROM test WHERE article = " + req.params.articleName) , function (err, result) {
         if(err)
         {
             res.status(500).send(err.toString());
         }
         else
         {
-            if(result.rows.length == 0)
+            if(result.rows.length === 0)
             {
                 res.status(404).send('Article not found');
             }
@@ -142,7 +142,7 @@ app.get('/articles/:articleName', function (req, res) {
             res.send(createTemplate(articleData));
             }
         }
-    })
+    };
 });
 
 
