@@ -106,7 +106,7 @@ app.post('/createuser/', function (req, res) {
         {
             res.send("User successfully created");
         }
-    })
+    });
 });
 
 
