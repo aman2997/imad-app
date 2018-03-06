@@ -40,42 +40,6 @@ app.get('/submit-name/', function (req, res) {
 });
 
 
-var article = {
-    'article-one' : {
-  title: 'Article-one',
-  date: '5th Feb, 2018',
-  content: 
-                `<p>
-                    This is the content for my first article. This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                </p>
-                <p>
-                    This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                </p>`
-},
-    'article-two' : {
-      title: 'Article-two',
-      date: '6th Feb, 2018',
-      content: 
-                    `<p>
-                        This is the content for my second article. This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                    </p>
-                    <p>
-                        This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                    </p>`
-},
-    'article-three': {
-      title: 'Article-three',
-      date: '7th Feb, 2018',
-      content: 
-                    `<p>
-                        This is the content for my third article. This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                    </p>
-                    <p>
-                        This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
-                    </p>`
-}
-};
-
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
