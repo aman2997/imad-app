@@ -9,7 +9,7 @@ submit.onclick = function() {
             if (request.status === 200) {
               alert('Logged in');
             }
-            else if(request.status === 404) {
+            else if(request.status === 403) {
                 alert('Incorrect username or password');
             }
             else if(request.status === 500) {
